@@ -1,27 +1,145 @@
+/* TrajanSansPro */
+@font-face {
+    font-family: "sans";
+    src: url("../fonts/TrajanSansPro-Regular.woff") format("woff"),
+        url("../fonts/TrajanSansPro-Regular.woff2") format("woff2");
+}
+/* Gilroy */
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.woff2") format("woff2");
+    font-weight: 600;
+}
+/* RistrettoPro */
+@font-face {
+    font-family: "ristretto";
+    src: url("../fonts/RistrettoPro-Thin.woff") format("woff"), url("../fonts/RistrettoPro-Thin.woff2") format("woff2");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "ristretto";
+    src: url("../fonts/RistrettoPro-ExtraLight.woff") format("woff"),
+        url("../fonts/RistrettoPro-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "ristretto";
+    src: url("../fonts/RistrettoPro-Light.woff") format("woff"),
+        url("../fonts/RistrettoPro-Light.woff2") format("woff2");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "ristretto";
+    src: url("../fonts/RistrettoPro-Medium.woff") format("woff"),
+        url("../fonts/RistrettoPro-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "ristretto";
+    src: url("../fonts/RistrettoPro-SemiBold.woff") format("woff"),
+        url("../fonts/RistrettoPro-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "ristretto";
+    src: url("../fonts/RistrettoPro-Bold.woff") format("woff"), url("../fonts/RistrettoPro-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "ristretto";
+    src: url("../fonts/RistrettoPro-Black.woff") format("woff"),
+        url("../fonts/RistrettoPro-Black.woff2") format("woff2");
+    font-weight: 900;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.clip-hero-bg-mobile {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 0 55%);
+    clip-path: polygon(0 0, 100% 0, 100% 63%, 0 55%);
+}
+.clip-header {
+    -webkit-clip-path: polygon(0 0, 98% 0, 80% 100%, 0 100%);
+    clip-path: polygon(0 0, 98% 0, 80% 100%, 0 100%);
+}
+.clip-header-white {
+    -webkit-clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+}
+.clip-hero-bg-white {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 64%, 0 56%);
+    clip-path: polygon(0 0, 100% 0, 100% 64%, 0 56%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.marquee {
+  overflow: hidden;
+  font-family: "Pridi", sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+
+.marquee__inner {
+  display: flex;
+}
+
+.marquee__line {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 10px 15px;
+  min-width: 100%;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.marquee__line2 {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 10px 15px;
+    min-width: 100%;
+    white-space: nowrap;
+    animation-name: marqueeLine2;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+  
+  to {
+    transform: translateX(-100%);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@keyframes marqueeLine2 {
+    from {
+      transform: translateX(-100%);
+    }
+    
+    to {
+      transform: translateX(0);
+    }
+  }
