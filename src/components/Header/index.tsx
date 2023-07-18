@@ -11,6 +11,7 @@ const Header = () => {
 
     const handleSetActiveSection = (section: string) => {
         setActiveSection(section);
+        setBurger(!burger);
     };
 
     const isAboveMediumScreend = useMediaQuery("(min-width: 1024px)");
