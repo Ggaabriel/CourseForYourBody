@@ -8,9 +8,9 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                alinaLay:"url('/images/alinaLay.png')",
-                alinaLayMobile:"url('/images/alinaLayMobile.jpg')",
-                bgSavva:"url('/images/savva.jpg')",
+                alinaLay:"url('/CourseForYourBody/images/alinaLay.png')",
+                alinaLayMobile:"url('/CourseForYourBody/images/alinaLayMobile.jpg')",
+                bgSavva:"url('/CourseForYourBody/images/savva.jpg')",
             },
             fontFamily: {
                 sans: ["sans"],
