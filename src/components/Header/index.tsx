@@ -21,7 +21,7 @@ const Header = () => {
             <div className=" bg-white grid  grid-cols-[100px_1fr] w-full items-center box-border pl-9">
                 <div className=" h-16 w-16 ">
                     <a href="#">
-                        <Image priority="false" src="/images/logoSava.jpg" width={64} height={64} alt="logo" />
+                        <Image src="/images/logoSava.jpg" width={64} height={64} alt="logo" />
                     </a>
                 </div>
                 <div
