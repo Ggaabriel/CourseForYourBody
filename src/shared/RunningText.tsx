@@ -8,10 +8,10 @@ const RunningText = (props: Props) => {
     return (
         <Splide options={{ rewind: true }} aria-label="React Splide Example" className="prose mx-auto">
             <SplideSlide>
-                <img src="/images/savva.jpg" alt="Image 1" />
+                <img src="/CourseForYourBody/images/savva.jpg" alt="Image 1" />
             </SplideSlide>
             <SplideSlide>
-                <img src="/images/savva.jpg" alt="Image 2" />
+                <img src="/CourseForYourBody/images/savva.jpg" alt="Image 2" />
             </SplideSlide>
         </Splide>
     );
