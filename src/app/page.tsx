@@ -28,7 +28,7 @@ export default function Home() {
             <Bunner />
 
             <Link smooth="true" offset={0} spy={true} to={Navigation.Landing} duration={500}>
-                <div className=" cursor-pointer fixed bottom-5 right-5 w-20 h-20 rounded-full  z-0 flex items-center justify-center animate-bounce">
+                <div className=" cursor-pointer fixed bottom-5 right-5 w-20 h-20 rounded-full  z-0 flex items-center justify-center">
                     <div className="w-7 h-7 border-l-black border-l-2 border-b-black border-b-2 rotate-[135deg] -mb-3"></div>
                 </div>
             </Link>

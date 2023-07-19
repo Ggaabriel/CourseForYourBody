@@ -1,17 +1,18 @@
 "use client";
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import '@splidejs/react-splide/css/sea-green';
+import "@splidejs/react-splide/css/sea-green";
+import Image from "next/image";
 type Props = {};
 
 const RunningText = (props: Props) => {
     return (
         <Splide options={{ rewind: true }} aria-label="React Splide Example" className="prose mx-auto">
             <SplideSlide>
-                <img src="/CourseForYourBody/images/savva.jpg" alt="Image 1" />
+                <Image width={100} height={100} src="/images/savva.jpg" alt="Image 1" layout="responsive"/>
             </SplideSlide>
             <SplideSlide>
-                <img src="/CourseForYourBody/images/savva.jpg" alt="Image 2" />
+                <Image width={100} height={100} src="/images/savva.jpg" alt="Image 2" layout="responsive"/>
             </SplideSlide>
         </Splide>
     );

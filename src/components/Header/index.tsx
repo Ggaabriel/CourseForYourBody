@@ -5,6 +5,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import Button from "@/shared/Button";
 import { Link } from "react-scroll";
 import { Navigation } from "@/types/navigation";
+import { gsap } from "gsap";
 
 const Header = () => {
     const [activeSection, setActiveSection] = useState("");
@@ -13,20 +14,46 @@ const Header = () => {
         setActiveSection(section);
         setBurger(false);
     };
-
+    ///CourseForYourBody
     const isAboveMediumScreend = useMediaQuery("(min-width: 1024px)");
     const [burger, setBurger] = useState(false);
     const DashedBorder = `border-dashed border-b-black/15 border-b p-2`;
+    const handleMenuToggle = () => {
+        if (burger) {
+            // Анимация для закрытия меню
+            gsap.to(".menu", {
+                x: "100%",
+                opacity: 0,
+                duration: 0.3,
+                onComplete: () => setBurger(false),
+            });
+        } else {
+            setBurger(true);
+            // Анимация для открытия меню
+            gsap.fromTo(
+                ".menu",
+                {
+                    x: "100%",
+                    opacity: 0,
+                    duration: 0.3,
+                },
+                {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.3,
+                }
+            );
+        }
+    };
     return (
         <header className=" font-sans z-10 fixed top-0 h-16 w-full">
             <div className=" bg-white grid  grid-cols-[100px_1fr] w-full items-center box-border pl-9">
-                <div className=" h-16 w-16 ">
-                    <a href="#">
-                        <Image src="/CourseForYourBody/images/logoSava.jpg" width={64} height={64} alt="logo" />
-                    </a>
-                </div>
+                <a href="#">
+                    <Image src="/images/logo.svg" width={200} height={100} alt="logo" className="h-20" />
+                </a>
+
                 <div
-                    className={` justify-end items-center flex-grow w-auto mr-8 gap-10 lg:flex max-lg:col-start-1 max-lg:col-end-3 ${
+                    className={`menu justify-end items-center flex-grow w-auto mr-8 gap-10 lg:flex max-lg:col-start-1 max-lg:col-end-3 ${
                         burger ? "block" : "hidden"
                     }`}
                 >
@@ -108,11 +135,9 @@ const Header = () => {
                     >
                         <Button>Купить</Button>
                     </Link>
-
-                    
                 </div>
                 <div
-                    onClick={(e) => setBurger(!burger)}
+                    onClick={handleMenuToggle}
                     className=" hidden mr-6 cursor-pointer max-lg:flex max-lg:items-end max-lg:justify-end max-lg:col-start-2 max-lg:row-start-1"
                 >
                     <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
