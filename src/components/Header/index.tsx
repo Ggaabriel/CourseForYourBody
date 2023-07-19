@@ -48,7 +48,7 @@ const Header = () => {
         <header className=" font-sans z-10 fixed top-0 h-16 w-full">
             <div className=" bg-white grid  grid-cols-[100px_1fr] w-full items-center box-border pl-9">
                 <a href="#">
-                    <img src="/images/logo.svg"  alt="logo" className="h-20" />
+                    <img src="/CourseForYourBody/images/logo.svg"  alt="logo" className="h-20" />
                 </a>
 
                 <div
