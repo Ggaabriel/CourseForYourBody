@@ -3,14 +3,15 @@
  */
 const nextConfig = {
     // Остальные настройки...
-  
+
     // Отключение экспериментальных картинок
     images: {
-      disableStaticImages: true,
+        disableStaticImages: true,
     },
-  
+    experimental: {
+        optimizeImages: false,
+    },
     // Остальные настройки...
-  };
-  
-  module.exports = nextConfig;
-  
+};
+
+module.exports = nextConfig;
