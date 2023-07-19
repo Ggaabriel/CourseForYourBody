@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Button from "@/shared/Button";
@@ -49,7 +48,7 @@ const Header = () => {
         <header className=" font-sans z-10 fixed top-0 h-16 w-full">
             <div className=" bg-white grid  grid-cols-[100px_1fr] w-full items-center box-border pl-9">
                 <a href="#">
-                    <Image src="/images/logo.svg" width={200} height={100} alt="logo" className="h-20" />
+                    <img src="/images/logo.svg"  alt="logo" className="h-20" />
                 </a>
 
                 <div
